@@ -1,23 +1,132 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>INIADの紹介</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="INIADの学びと科目群を紹介します。">
+    <title>INIADの紹介</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #183044;
+        --muted: #526879;
+        --accent: #087e8b;
+        --accent-dark: #075d68;
+        --paper: #ffffff;
+        --background: #f2f7f8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--ink);
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      header {
+        padding: 3.5rem 1.25rem;
+        background: linear-gradient(135deg, #075d68, #0b8790);
+        color: var(--paper);
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: 0.08em;
+      }
+
+      main {
+        width: min(100% - 2rem, 800px);
+        margin: 2rem auto 4rem;
+      }
+
+      section {
+        margin-bottom: 1.5rem;
+        padding: clamp(1.25rem, 4vw, 2rem);
+        border: 1px solid #e1eaed;
+        border-radius: 16px;
+        background: var(--paper);
+        box-shadow: 0 8px 24px rgb(24 48 68 / 6%);
+      }
+
+      h2 {
+        margin: 0 0 1rem;
+        padding-left: 0.8rem;
+        border-left: 5px solid var(--accent);
+        color: var(--accent-dark);
+        font-size: 1.35rem;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 0.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        padding: 0.8rem 1rem;
+        border: 1px solid #dcebed;
+        border-radius: 10px;
+        background: #f6fbfb;
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      li::before {
+        content: "✓";
+        margin-right: 0.6rem;
+        color: var(--accent);
+      }
+
+      @media (max-width: 480px) {
+        header {
+          padding: 2.5rem 1rem;
+        }
+
+        main {
+          width: min(100% - 1.25rem, 800px);
+          margin-top: 1.25rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>INIADの紹介</h1>
-     <h2>概要</h2>
-     <p>INIADでは入学直後から、世界中で使われているプログラミング言語「Python」を学びます。さらに、ソースプログラム管理システム「Git」を用いたチームでのWebサービス開発も学びます。</p>
-     <h2>科目群一覧</h2>
-     <ul>
-      <li>コンピュータ・システム</li>
-      <li>コンピュータ・ソフトウェア</li>
-      <li>ユーザ・エクスペリエンス</li>
-      <li>データサイエンス</li>
-      <li>ICT社会応用</li>
-      <li>連携科目群</li>
-      <li>ビジネス構築</li>
-      <li>コミュニティ形成</li>
-    </ul> 
+    <header>
+      <h1>INIADの紹介</h1>
+    </header>
+    <main>
+      <section aria-labelledby="overview">
+        <h2 id="overview">概要</h2>
+        <p>INIADでは入学直後から、世界中で使われているプログラミング言語「Python」を学びます。さらに、ソースプログラム管理システム「Git」を用いて、プログラムの管理方法も学びます。</p>
+      </section>
+      <section aria-labelledby="subjects">
+        <h2 id="subjects">科目群一覧</h2>
+        <ul>
+          <li>コンピュータ・システム</li>
+          <li>コンピュータ・ソフトウェア</li>
+          <li>ユーザ・エクスペリエンス</li>
+          <li>データサイエンス</li>
+          <li>ICT社会応用</li>
+          <li>連携科目群</li>
+          <li>ビジネス構築</li>
+          <li>コミュニティ形成</li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
